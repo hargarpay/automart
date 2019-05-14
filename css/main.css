@@ -720,6 +720,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 10px;
     font-size: 0.9em;
     border-radius: 3px;
+    border: 1px solid #142f40;
 }
 
 input:hover,
@@ -752,7 +753,7 @@ button:visited{
 
 .button{
     display: block;
-    padding: 10px 15px;
+    padding: 17.5px 10px;
     width: 100%;
     font-size: 1em;
     cursor: pointer;
@@ -760,6 +761,12 @@ button:visited{
     background-color: #ffffff;
     color: #142f40;
     text-align:center;
+    border-radius: 7.5px;
+    font-weight: bolder;
+}
+
+header nav .button{
+    padding: 12px 15px;
 }
 
 /**==========================
@@ -821,6 +828,11 @@ button:visited{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.dyn-divider{
+    border-right: 1px solid #142f40;
+    border-bottom: 0px;
+}
 /**=============================
     Featured Badge
 ==============================**/
@@ -848,6 +860,71 @@ button:visited{
     z-index: 2;
 }
 
+/**=========================
+    Alert Box
+==========================**/
+.alert{
+    position: fixed;
+    width:80%;
+    margin: auto;
+    padding: 15px 10px;
+    left: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(5vh);
+    transition: all 0.5s;
+}
+
+.alert.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(30vh);
+}
+
+.alert .alert-modal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-default{
+    background-color: #cccccc;
+    color: #000000;
+}
+
+.alert-danger{
+    background-color: #fbaea5;
+    color: #a62020;
+}
+
+.alert-success{
+    background-color: #8aec8a;
+    color: #185c1b;
+}
+
+.alert-info{
+    background-color: #7db6e6;
+    color: #142f40;
+}
+
+.alert .alert-message-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.alert .alert-close{
+    cursor: pointer;
+
+}
+
+.alert div.alert-close{
+    margin-top: -0.5em;
+}
+
+.alert span.alert-close{
+    font-size: 1.5em;
+}
+
 /**============================
     Modal
 =============================**/
@@ -860,12 +937,16 @@ button:visited{
     background-color: rgba(0, 0, 0, 0.8);
     top: 0px;
     left: 0px;
-    z-index: 6;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
 }
 
 .modal.active{
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 6;
 }
 
 .modal .modal-inner{
@@ -1534,7 +1615,14 @@ Small Screen
     .mobile-text-justify{
         text-align: justify !important;
     }
-    
+
+    /**================================
+        Divider
+    =================================**/
+    .dyn-divider{
+        border-bottom: 1px solid #142f40;
+        border-right: 0px;
+    }
     
 }
 
