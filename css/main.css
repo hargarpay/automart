@@ -633,12 +633,18 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-.field, .control, input{
+
+.field, .control, input, textarea{
     width: 100%;
 }
 
 .field{
     margin-bottom: 1em;
+}
+.field textarea{
+    resize: none;
+    font-size: 1em;
+    padding: 10px;
 }
 
 .field label{
@@ -715,7 +721,11 @@ input[type=number]::-webkit-outer-spin-button {
 input:hover,
 input:focus,
 input:active,
-input:visited{
+input:visited,
+textarea:hover,
+textarea:focus,
+textarea:active,
+textarea:visited{
     outline: 0;
 }
 
@@ -796,6 +806,17 @@ button:visited{
     margin-left: -4px;
 }
 
+/**======================
+    Divider
+=======================**/
+
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: #142f40;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 /**=============================
     Featured Badge
 ==============================**/
@@ -821,6 +842,80 @@ button:visited{
     left: -0.5em;
     top: 28px;
     z-index: 2;
+}
+
+/**============================
+    Modal
+=============================**/
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0) ; /* Fallback */
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0px;
+    left: 0px;
+    z-index: 6;
+    display: none;
+}
+
+.modal.active{
+    display: block;
+}
+
+.modal .modal-inner{
+    background-color: #ffffff;
+    width: 80%;
+    position: relative;
+    margin:auto;
+    transition: all 0.5s;
+    transform: translateY(0%);
+}
+
+.modal.active .modal-inner{
+    transform: translateY(10%);
+}
+
+.modal .modal-header,
+.modal .modal-footer{
+    background-color: #cccccc;
+    padding: 15px;
+}
+
+.modal .modal-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .modal-header .close:not(span){
+    margin-top: -0.75em;
+}
+
+.modal .modal-header{
+    pointer-events: none;
+}
+
+.modal .modal-header .close{
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.modal .modal-header .header,
+.modal .modal-header header{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.modal .close span{
+    font-size: 2em;
+}
+
+.modal .modal-content{
+    background-color: #ffffff;
+    max-height: 80vh;
+    padding: 20px;
+    overflow-y: scroll;
 }
 
 
@@ -894,7 +989,7 @@ footer{
 
 .flex-space-between{
     display: flex !important;
-    justify-content: space-between !important;
+    justify-content: space-between;
 }
 
 .p40{
@@ -939,6 +1034,26 @@ footer{
 
 .marginless-bottom{
     margin-bottom: 0px !important;
+}
+
+.paddingless{
+    padding: 0px !important;
+}
+
+.paddingless-left{
+    padding-left: 0px !important;
+}
+
+.paddingless-right{
+    padding-right: 0px !important;
+}
+
+.paddingless-top{
+    padding-top: 0px !important;
+}
+
+.paddingless-bottom{
+    padding-bottom: 0px !important;
 }
 
 .radiusless-tr-tl{
@@ -1335,7 +1450,87 @@ Small Screen
     .pa-mobile{
         position: absolute;
     }
+    .mobile-borderless{
+        border: 0px !important;
+    }
+    
+    .mobile-marginless{
+        margin: 0px !important;
+    }
+    
+    .mobile-marginless-left{
+        margin-left: 0px !important;
+    }
+    
+    .mobile-marginless-right{
+        margin-right: 0px !important;
+    }
+    
+    .mobile-marginless-top{
+        margin-top: 0px !important;
+    }
+    
+    .mobile-marginless-bottom{
+        margin-bottom: 0px !important;
+    }
+    
+    .mobile-paddingless{
+        padding: 0px !important;
+    }
+    
+    .mobile-paddingless-left{
+        padding-left: 0px !important;
+    }
+    
+    .mobile-paddingless-right{
+        padding-right: 0px !important;
+    }
+    
+    .mobile-paddingless-top{
+        padding-top: 0px !important;
+    }
+    
+    .mobile-paddingless-bottom{
+        padding-bottom: 0px !important;
+    }
+    
+    .mobile-radiusless-tr-tl{
+        border-top-right-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+    }
+    
+    .mobile-radiusless-br-bl{
+        border-bottom-right-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+    
+    .mobile-radiusless-tr-br{
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+    
+    .mobile-radiusless-tl-bl{
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
 
+    /**=============================
+      Mobile  Typography
+    ==============================**/
+
+    .mobile-text-center{
+        text-align: center !important;
+    }
+    .mobile-text-left{
+        text-align: left !important;
+    }
+    .mobile-text-right{
+        text-align: right !important;
+    }
+    .mobile-text-justify{
+        text-align: justify !important;
+    }
+    
     
 }
 
@@ -1476,6 +1671,76 @@ Small Screen
         margin-top: 1.25em !important;
         margin-bottom: 1.25em !important;
     }
+
+    .flex-space-between-not-mobile{
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    .tablet-up-marginless{
+        margin: 0px !important;
+    }
+    
+    .tablet-up-marginless-left{
+        margin-left: 0px !important;
+    }
+    
+    .tablet-up-marginless-right{
+        margin-right: 0px !important;
+    }
+    
+    .tablet-up-marginless-top{
+        margin-top: 0px !important;
+    }
+    
+    .tablet-up-marginless-bottom{
+        margin-bottom: 0px !important;
+    }
+    
+    .tablet-up-paddingless{
+        padding: 0px !important;
+    }
+    
+    .tablet-up-paddingless-left{
+        padding-left: 0px !important;
+    }
+    
+    .tablet-up-paddingless-right{
+        padding-right: 0px !important;
+    }
+    
+    .tablet-up-paddingless-top{
+        padding-top: 0px !important;
+    }
+    
+    .tablet-up-paddingless-bottom{
+        padding-bottom: 0px !important;
+    }
+    
+    .tablet-up-radiusless-tr-tl{
+        border-top-right-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+    }
+    
+    .tablet-up-radiusless-br-bl{
+        border-bottom-right-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+    
+    .tablet-up-radiusless-tr-br{
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+    
+    .tablet-up-radiusless-tl-bl{
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+
+    .tablet-up-mt25em{
+        margin-top: 0.25em !important;
+    }
+    
 
 }
 
