@@ -227,6 +227,41 @@ Background Color
     color: #000000;
 }
 
+/**=================
+    Border Color
+==================**/
+.bdr-color-peach{
+    border-color: #f29f8d !important;
+}
+
+.bdr-color-mid-peach{
+    border-color: #d96459 !important;
+}
+
+.bdr-color-dark-peach{
+    border-color: #a62121 !important;
+}
+
+.bdr-color-blue{
+    border-color: #142f40 !important;
+}
+
+.bdr-color-light-blue{
+    border-color: #4e8bbf !important;
+}
+
+.bdr-color-lighter-blue{
+    border-color: #96ceff !important;
+}
+
+.bdr-color-white{
+    border-color: #ffffff !important;
+}
+
+.bdr-color-black{
+    border-color: #000000;
+}
+
 
 /**=================
     Body
@@ -239,7 +274,7 @@ body{
 /**===================
 Navigation Bar
 ===================**/
-header{
+header nav{
     padding-left: 1.25em;
     padding-right: 1.25em;
 }
@@ -610,6 +645,34 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: bolder;
 }
 
+.field.addon{
+    display: flex;
+    justify-content: center;
+}
+
+.field.addon .control.flex-1{
+    width: initial;
+    flex: 1;
+}
+
+.field.addon .control.flex-2{
+    width: initial;
+    flex: 2;
+}
+
+.field.addon .control.flex-3{
+    width: initial;
+    flex: 3;
+}
+.field.addon .control.flex-4{
+    width: initial;
+    flex: 4;
+}
+.field.addon .control.flex-5{
+    width: initial;
+    flex: 5;
+}
+
 .form-header{
     padding: 1px 15px;
     margin-top: -0.75em;
@@ -646,6 +709,7 @@ input[type=number]::-webkit-outer-spin-button {
 .field input{
     padding: 10px;
     font-size: 0.9em;
+    border-radius: 3px;
 }
 
 input:hover,
@@ -693,7 +757,7 @@ button:visited{
 }
 
 .card:hover{
-    box-shadow: 0 0 5px #142f40;
+    border: 1px solid #142f40;
 }
 
 .card * {
@@ -817,11 +881,20 @@ footer{
 ======================**/
 
 .mt075em{
-    margin-top: 0.75em;
+    margin-top: 0.75em !important;
+}
+
+.mt125em{
+    margin-top: 1.25em !important;
 }
 
 .flex{
     display: flex !important;
+}
+
+.flex-space-between{
+    display: flex !important;
+    justify-content: space-between !important;
 }
 
 .p40{
@@ -836,8 +909,61 @@ footer{
     width: 100% !important;
 }
 
+.is-fullheight{
+    height: 100% !important;
+}
+
 .is-uppercase{
     text-transform: uppercase !important;
+}
+
+.borderless{
+    border: 0px !important;
+}
+
+.marginless{
+    margin: 0px !important;
+}
+
+.marginless-left{
+    margin-left: 0px !important;
+}
+
+.marginless-right{
+    margin-right: 0px !important;
+}
+
+.marginless-top{
+    margin-top: 0px !important;
+}
+
+.marginless-bottom{
+    margin-bottom: 0px !important;
+}
+
+.radiusless-tr-tl{
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+}
+
+.radiusless-br-bl{
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.radiusless-tr-br{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.radiusless-tl-bl{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.p-lr-125em{
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
 
 
@@ -911,6 +1037,111 @@ Small Screen
     }
     .mobile-hidden{
         display: none;
+    }
+
+     /**======================
+     Extra Small Column Sizes
+    =======================**/
+
+    .cols .col-xs-1{
+        width: 8.33%;
+    }
+
+    .cols .col-xs-2{
+        width: 16.67%;
+    }
+
+    .cols .col-xs-3{
+        width: 25%;
+    }
+
+    .cols .col-xs-4{
+        width: 33.33%;
+    }
+
+    .cols .col-xs-5{
+        width: 41.67%;
+    }
+
+    .cols .col-xs-6{
+        width: 50%;
+    }
+
+    .cols .col-xs-7{
+        width: 58.33%;
+    }
+
+    .cols .col-xs-8{
+        width:66.67%;
+    }
+
+    .cols .col-xs-9{
+        width: 75%;
+    }
+
+    .cols .col-xs-10{
+        flex:none;
+        width: 83.33%;
+    }
+
+    .cols .col-xs-11{
+        width: 91.67%;
+    }
+
+    .cols .col-xs-12{
+        flex:none;
+        width: 100%
+    }
+    /**=============
+    Columns Offset
+    ============**/
+
+    .cols .col-xs-offset-1{
+        margin-left: 8.33%;
+    }
+
+    .cols .col-xs-offset-2{
+        margin-left: 16.67%;
+    }
+
+    .cols .col-xs-offset-3{
+        margin-left: 25%;
+    }
+
+    .cols .col-xs-offset-4{
+        margin-left: 33.33%;
+    }
+
+    .cols .col-xs-offset-5{
+        margin-left: 41.67%;
+    }
+
+    .cols .col-xs-offset-6{
+        margin-left: 50%;
+    }
+
+    .cols .col-xs-offset-7{
+        margin-left: 58.33%;
+    }
+
+    .cols .col-xs-offset-8{
+        margin-left:66.67%;
+    }
+
+    .cols .col-xs-offset-9{
+        margin-left: 75%;
+    }
+
+    .cols .col-xs-offset-10{
+        margin-left: 83.33%;
+    }
+
+    .cols .col-xs-offset-11{
+        margin-left: 91.67%;
+    }
+
+    .cols .col-xs-offset-12{
+        margin-left: 100%
     }
 
     .navbar,
@@ -1227,17 +1458,25 @@ Small Screen
     .hero-slider.tablet .inner-slider .slider-item{
         width: calc(33.33% - 1em);
     }
+
+    /**=======================
+        Tablet Utility
+    =======================**/
+    .tablet-hidden{
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px){
     .is-fullheight-tablet{
-        height: 100%;
+        height: 100% !important;
     }
 
     .mtb125em{
-        margin-top: 1.25em;
-        margin-bottom: 1.25em;
+        margin-top: 1.25em !important;
+        margin-bottom: 1.25em !important;
     }
+
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px){
@@ -1355,10 +1594,17 @@ Small Screen
     }
 
     /**=======================
-        Slider for Tablet 
+        Slider for Desktop 
     ========================**/
     .hero-slider.desktop .inner-slider .slider-item{
         width: calc(33.33% - 1em);
+    }
+
+     /**=======================
+        Desktop Utility
+    =======================**/
+    .desktop-hidden{
+        display: none;
     }
 }
 
@@ -1471,10 +1717,19 @@ Small Screen
         margin-left: 100%
     }
     /**=======================
-        Slider for Tablet 
+        Slider for HD Desktop 
     ========================**/
     .hero-slider.hd-desktop .inner-slider .slider-item{
         width: calc(25% - 1em);
     }
+
+     /**=======================
+        HD Desktop Utility
+    =======================**/
+    .hd-desktop-hidden{
+        display: none;
+    }
+
+
 }
 
