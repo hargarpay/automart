@@ -326,4 +326,20 @@ listener(document, "DOMContentLoaded", function(){
             
     }
 
+
+    /**==================================
+     *  Modal Open and Close
+     ==================================**/
+        listener(document.body, "click", function(e){
+            const target = e.target;
+            if(target.classList.contains("modal-opener")){
+                const modalPointer = target.getAttribute("data-modal-id");
+
+                const modal = document.querySelector(modalPointer) || document.querySelector(".modal");
+
+                modal.classList.add("active");
+            }else if(target.closest(".modal") && target.classList.contains("close")){
+                target.closest(".modal").classList.remove("active");
+            }
+        });
 });
