@@ -191,6 +191,8 @@ Background Color
     background-color: rgba(200, 200, 200, 0.5) !important;
 }
 
+.bg-
+
 
 /**=================
     Text Color
@@ -962,6 +964,11 @@ header nav .button{
     padding: 12px 15px;
 }
 
+.button.init-width{
+    width: initial;
+    padding: 10px;
+}
+
 /**==========================
     Card
 ==========================**/
@@ -1196,6 +1203,205 @@ header nav .button{
     overflow-y: scroll;
 }
 
+/**==============================
+    Table 
+===============================**/
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table thead{
+    background-color: #142f40;
+    color: #ffffff;
+}
+table.dark-peach thead{
+    background-color: #a62020;
+    color: #ffffff;
+}
+
+table.peach thead{
+    background-color: #f29f8d;
+    color: #142f40;
+}
+
+table thead th,
+table thead td{
+    border-right-color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+table.peach thead th,
+table.peach thead td{
+    border-right-color: #142f40;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+table thead th:last-child,
+table thead td:last-child{
+    border-right-color: #142f40;
+}
+
+table.dark-peach thead th:last-child,
+table.dark-peach thead td:last-child{
+    border-right-color: #a62020;
+}
+
+table.peach thead th:last-child,
+table.peach thead td:last-child{
+    border-right-color: #f29f8d;
+}
+
+table.serial thead th:first-child,
+table.serial tbody td:first-child{
+    width: 10px;
+}
+
+table.serial.not-fix thead th:first-child,
+table.serial.not-fix tbody td:first-child{
+    width: initial;
+}
+
+table.hover tbody tr:hover{
+    background-color: rgba(20, 47, 64, 0.5);
+}
+
+table.hover.dark-peach tbody tr:hover{
+    background-color: rgba(166, 31, 31, 0.5)
+}
+
+table.hover.peach tbody tr:hover{
+    background-color: rgba(242, 159, 141, 0.5);
+}
+
+
+table tfoot tr{
+
+}
+
+table td,
+table th{
+    border: 1px solid #142f40;
+    padding: 10px;
+}
+
+table.dark-peach td,
+table.dark-peach th{
+    border: 1px solid #a62020;
+    padding: 10px;
+}
+
+table.peach td,
+table.peach th{
+    border: 1px solid #f29f8d;
+    padding: 10px;
+}
+
+/**=======================
+    Dropdown
+=======================**/
+
+.dropdown {
+    text-align: center;
+    position: relative;
+}
+
+.dropdown  span{
+    position: relative;
+    display: inline-block;
+    background-color: #142f40;
+    background-color: rgba(20, 47, 64, 0.5);
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.dropdown.dark-peach span{
+    background-color: #a62020;
+    background-color: rgba(166, 31, 31, 0.5)
+}
+
+.dropdown.peach span{
+    background-color: rgb(242, 159, 141);
+    background-color: rgba(242, 159, 141, 0.5);
+}
+
+.dropdown  span::before{
+    content: "";
+    position: absolute;
+    border: 7.5px solid transparent;
+    border-bottom-color: #ffffff;
+    left: 5px;
+    top: 1.25px;
+    transition: all 0.5s; 
+}
+
+.dropdown.peach span::before{
+    border-bottom-color: #142f40;
+}
+
+.dropdown.hoverable:hover span::before,
+.dropdown.active span::before{
+    transform: rotateZ(-180deg);
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    top: 8.75px;
+}
+
+.dropdown.hoverable:hover span,
+.dropdown.active span{
+    background-color: #142f40;
+}
+.dropdown.peach.hoverable:hover span,
+.dropdown.peach.active span{
+    background-color: rgb(242, 159, 141);
+}
+.dropdown.dark-peach.hoverable:hover span,
+.dropdown.dark-peach.active span{
+    background-color: #142f40;
+    background-color: #a62020;
+}
+
+
+.dropdown .content{
+    position: absolute;
+    min-width: 200px;
+    width: 100%;
+    background-color: #142f40;
+    color: #ffffff;
+    right: 5px;
+    top: 30px;
+    z-index: 2;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: visibility, opacity, top;
+    transition-duration: .5s;
+}
+
+.dropdown .content::before{
+    position: absolute;
+    content: "";
+    border: 10px solid transparent;
+    border-bottom-color: #142f40;
+    top:-20px;
+    right: 20px;
+}
+
+.dropdown.hoverable:hover .content,
+.dropdown.active .content{
+    opacity: 1;
+    visibility: visible;
+    top: 37.5px;
+}
+
+
 
 
 /**=========================
@@ -1269,6 +1475,10 @@ footer{
 .flex-space-between{
     display: flex !important;
     justify-content: space-between;
+}
+
+.flex-align-center{
+    align-items: center !important;
 }
 
 .p40{
@@ -1405,9 +1615,9 @@ footer{
 }
 
 
-/* Mennu List */
-
-
+/**=========================
+    Menu List 
+=========================**/
 
 .menu-list.no-width .menu-item.menu-active,
 .menu-list.no-width .menu-item:hover{
@@ -1415,6 +1625,32 @@ footer{
     color: #a62020;
     border: 1px solid #a62020;
 }
+.menu-list .menu-item:not(:last-child){
+    border-bottom: 1px solid #ffffff;
+}
+
+.dropdown .menu-list .menu-item:first-child{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.dropdown .menu-list .menu-item:last-child{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.menu-list .menu-item{
+    width: 100%;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.menu-list .menu-item:hover{
+    background-color: #ffffff;
+    color: #142f40;
+}
+
+
 
 /**==============
 Small Screen
@@ -1837,7 +2073,86 @@ Small Screen
         border-bottom: 1px solid #142f40;
         border-right: 0px;
     }
-    
+
+    /**===================================
+        Table for mobile
+    ===================================**/
+    table,
+    thead,
+    tbody,
+    tr, th, td{
+        display: block;
+    }
+
+    table tr td{
+        position: relative;
+    }
+
+    table.serial tbody td:first-child{
+        width: 100%;
+    }
+
+    table tr td:before{
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -99999px;
+        left: -99999px
+    }
+
+    table.serial tbody tr td:first-child{
+        background-color: #142f40;
+        color: white;
+    }
+
+    table.serial tbody tr td:first-child,
+    tbody tr td[data-title]{
+        padding-left: 50% !important;
+    }
+
+    tbody tr td:nth-of-type(2):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(3):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(4):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(5):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(6):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(7):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(8):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(9):before {
+            content: attr(data-title);
+    }
+    tbody tr td:nth-of-type(10):before {
+            content: attr(data-title);
+    }
+
+    /**================================
+        Dropdown for Mobile
+    ===============================**/
+
+    .dropdown .content::before{
+        right: calc(50% - 15px);
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px){
@@ -1965,6 +2280,14 @@ Small Screen
     =======================**/
     .tablet-hidden{
         display: none;
+    }
+
+     /**=======================
+    DropDown for Tablet
+    =======================**/
+
+    .dropdown .content{
+        right: 0px;
     }
 }
 
@@ -2176,6 +2499,14 @@ Small Screen
     =======================**/
     .desktop-hidden{
         display: none;
+    }
+
+    /**=======================
+    DropDown for Desktop
+    =======================**/
+
+    .dropdown .content{
+        right: 0px;
     }
 }
 
