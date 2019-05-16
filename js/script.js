@@ -623,6 +623,27 @@ listener(document, "DOMContentLoaded", function(){
                 prevActiveSelect.classList.remove("active");
             }
         }
+
+        if(
+            target.closest(".dropdown:not(.hoverable)") && target.nodeName.toLowerCase() === "span"
+            && target.classList.contains("anchor")
+        ){
+            const dropdown = target.closest(".dropdown");
+            if(!dropdown.classList.contains("active")){
+                const activeDropDown = document.querySelector(".dropdown.active");
+                if(activeDropDown) activeDropDown.classList.remove("active");
+                dropdown.classList.add("active");
+            }else{
+                dropdown.classList.remove("active");
+            }
+        }
+
+        if(
+            target.closest(".dropdown.active") === null
+        ){
+            const activeDropDown = document.querySelector(".dropdown.active");
+                if(activeDropDown) activeDropDown.classList.remove("active");
+        }
     });
 
     listener(document.body, "input", function(e){
