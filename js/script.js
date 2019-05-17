@@ -506,7 +506,7 @@ listener(document, "DOMContentLoaded", function(){
     listener(document.body, "click", function(e){
         const target = e.target;
         if(target.classList.contains("modal-opener")){
-            const modalPointer = target.getAttribute("data-modal-id");
+            const modalPointer = target.getAttribute("data-modal-target");
 
             const modal = document.querySelector(modalPointer) || document.querySelector(".modal");
 
