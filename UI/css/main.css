@@ -1452,7 +1452,7 @@ table.peach th{
 }
 
 /**===========================
-    Image Manager
+    Image Processing
 ============================**/
 
 .inner-page-menu{
@@ -1469,12 +1469,6 @@ table.peach th{
     margin-left: 10px;
     margin-top: 10px;
     cursor: pointer;
-    background-color: #cccccc;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -ms-transition: all 0.3s;
 }
 
 .inner-page-menu.active{
@@ -1483,162 +1477,12 @@ table.peach th{
     border-top-right-radius: 5px;
     color:#0781bf;
 }
-.inner-page-lists{
-    position: relative;
-    height: calc(70vh - 100px);
-}
 
 .inner-page{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    visibility: hidden;;
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    opacity: 0;
-    transition-property: opacity, visibility;
-    transition-duration: 0.3s;
-    -webkit-transition-property: opacity, visibility;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-property: opacity, visibility;
-    -o-transition-duration: 0.3s;
-    -moz-transition-property: opacity, visibility;
-    -moz-transition-duration: 0.3s;
-    -ms-transition-property: opacity, visibility;
-    -ms-transition-duration: 0.3s;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-}
 
-.inner-page.active{
-    visibility: visible;
-    opacity: 1;
-}
-
-.image-item.active{
-    border: 2px solid #0781bf;
-    padding:2px;
-}
-
-.attachment-preview{
-    position: relative;
-    cursor: pointer;
-}
-
-.attachment-preview.active{
-    box-shadow: 0 0 0 3px #fff, 0 0 0 7px #0781bf;
-}
-
-.attachment-preview::before{
-    content: "";
-    display: block;
-    padding-top: 100%;
-}
-.thumbnail{
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
-.thumbnail .center{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    transform: translate(50%, 50%);
-}
-
-.thumbnail .center img{
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-}
-
-.close-info-view{
-    visibility: hidden;
-}
-
-/**============================
-    Icons
-=============================**/
-
-/* Checkbox */
-
-span.checkbox,
-span.checkbox .checkbox-stem,
-span.checkbox .checkbox-kick{
-    position: absolute;
-}
-
-span.checkbox{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: #0781bf;
-    right: -15px;
-    top: -15px;
-    z-index: 3;
-    overflow: hidden;
-    visibility: hidden;
-    opacity: 0;
-    transition-property: opacity, visibility;
-    transition-duration: 0.3s;
-    -webkit-transition-property: opacity, visibility;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-property: opacity, visibility;
-    -o-transition-duration: 0.3s;
-    -moz-transition-property: opacity, visibility;
-    -moz-transition-duration: 0.3s;
-    -ms-transition-property: opacity, visibility;
-    -ms-transition-duration: 0.3s;
-}
-
-.checkbox.icon{
-    visibility: visible;
-    opacity: 1;
 }
 
 
-span.checkbox .checkbox-stem,
-span.checkbox .checkbox-kick{
-    display: block;
-    z-index: 4;
-    width:4px;
-    background-color: #ffffff;
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    transform: rotate(45deg);
-}
-
-span.checkbox .checkbox-stem{
-    height: 5px;
-    top: 12px;
-    left: 7px;
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-span.checkbox .checkbox-kick{
-    height: 15px;
-    top: 5.5px;
-    left: 14px;
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
 
 /**=========================
     Footer
@@ -1706,12 +1550,6 @@ footer{
 
 .flex{
     display: flex !important;
-}
-
-.flex-center{
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
 }
 
 .flex-space-between{
@@ -1819,13 +1657,6 @@ footer{
 
 .dilb{
     display: inline-block !important;
-}
-
-.dn{
-    display: none !important;
-}
-.mw250{
-    min-width: 250px !important;
 }
 
 .minus-mt2{
@@ -2418,34 +2249,6 @@ Small Screen
         background-image: -webkit-radial-gradient(at bottom left, #a62020 , #142f40) !important;
         background-image: -o-radial-gradient(at bottom left, #a62020 , #142f40) !important;
         background-color: #a62020 !important;
-    }
-
-    /**================================
-        Image Manager for Mobile View
-    =================================**/
-
-    .mobile-view-info{
-        position: absolute;
-        left: 50%;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-color: #e5e5e5 !important;
-        width: inherit !important;
-        transition: left 0.3s;
-        -moz-transition: left 0.3s;
-        -o-transition: left 0.3s;
-        -ms-transition: left 0.3s;
-        -webkit-transition: left 0.3s;
-        z-index: 10;
-    }
-
-    .mobile-view-info.close{
-        left: 100%;
-    }
-
-    .close-info-view.open{
-        visibility: visible;
     }
 
 }
