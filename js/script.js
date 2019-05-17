@@ -644,6 +644,54 @@ listener(document, "DOMContentLoaded", function(){
             const activeDropDown = document.querySelector(".dropdown.active");
                 if(activeDropDown) activeDropDown.classList.remove("active");
         }
+
+        if(
+            target.classList.contains("inner-page-menu") && !target.classList.contains("active")
+        ){
+            const pageId = target.getAttribute("data-page-target");
+            const activeMenu = document.querySelector(".inner-page-menu.active");
+            if(activeMenu){
+                const activePage = document.querySelector(activeMenu.getAttribute("data-page-target"));
+                activePage.classList.remove("active");
+                activeMenu.classList.remove("active");
+            }
+            const page = document.querySelector(pageId);
+            target.classList.add("active");
+            page.classList.add("active");
+
+        }
+
+        if(
+            target.classList.contains("file-upload")
+        ){
+            const fileInput = document.querySelector("#file-input");
+            fileInput.click();
+
+        }
+
+        if(target.closest(".attachment-preview:not(.active)")){
+            const attachmentPreview = target.closest(".attachment-preview:not(.active)");
+            const activeAttachPreview = document.querySelector(".attachment-preview.active");
+            const mobileCloseBtn = document.querySelector(".modal-footer .close-info-view");
+            const closeMobileView = document.querySelector(".mobile-view-info");
+            if(activeAttachPreview){
+                activeAttachPreview.classList.remove("active");
+                activeAttachPreview.querySelector(".checkbox.icon").classList.remove("icon");
+            }
+
+            mobileCloseBtn.classList.add("open");
+            closeMobileView.classList.remove("close");
+            attachmentPreview.classList.add("active");
+            attachmentPreview.querySelector(".checkbox").classList.add("icon");
+
+        }
+
+        if(target.classList.contains("close-info-view")){
+
+            const closeMobileView = document.querySelector(".mobile-view-info:not(.close)");
+            closeMobileView.classList.add("close");
+            target.classList.remove("open");
+        }
     });
 
     listener(document.body, "input", function(e){
