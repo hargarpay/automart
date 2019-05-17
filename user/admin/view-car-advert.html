@@ -51,13 +51,13 @@
                         </div>
                     </div>
                     <div class="nav-left">
-                        <div class="nav-list">
-                            <div class="nav-item">
+                        <div class="nav-list ">
+                            <div class="nav-item active">
                                 <a href="/user/admin/view-car-advert.html">
                                     Administrator
                                 </a>
                             </div>
-                            <div class="nav-item  active">
+                            <div class="nav-item">
                                 <a href="/user/view-car-advert.html">
                                     Dashboard
                                 </a>
@@ -90,10 +90,7 @@
                             <div class="sidebar-inner">
                                 <div class="menu-list no-width mobile-bg-radial-blue-dark-peach tablet-up-bg-transparent">
                                     <div class="menu-item menu-active">
-                                       <a href="/user/view-car-advert.html">View Car Advert</a>
-                                    </div>
-                                    <div class="menu-item">
-                                       <a href="/user/create-car-advert.html">Create Car Advert</a> 
+                                       <a href="/user/admin/view-car-advert.html">View Car Advert</a>
                                     </div>
                                 </div>
                                 <div class="drawer">
@@ -112,8 +109,7 @@
                             <div class="col-12 paddingless-top paddingless-left paddingless-right bg-light-grey">
                                 <div class="cols">
                                     <div class="col-12 flex-space-between bg-light-grey flex-align-center">
-                                        <h3 class="marginless">View Car Adverts</h3>
-                                        <a href="/user/create-car-advert.html" class="button bg-blue init-width"> Create Car Advert</a>
+                                        <h3 class="marginless">Administator View Car Adverts</h3>
                                     </div>
                                     <div class="col-12">
                                         <div class="cols">
@@ -124,8 +120,8 @@
                                                             <tr>
                                                                 <th>S/N</th>
                                                                 <th>Title</th>
+                                                                <th>Description</th>
                                                                 <th>Status</th>
-                                                                <th>Image</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
@@ -133,9 +129,11 @@
                                                             <tr>
                                                                 <td>1</td>
                                                                 <td data-title="Title">Car  Title 1</td>
-                                                                <td> UNSOLD </td>
-                                                                <td class="text-center">
-                                                                    <button type="button" class="button bg-blue modal-opener dilb p-tb10-lr20 bdr-color-blue" data-modal-target=".image-process">Upload Image</button>
+                                                                <td>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, officia deleniti alias odio nemo in voluptatum voluptatibus quas, sit veritatis harum et reiciendis cupiditate repudiandae. Officia voluptate totam voluptatum omnis!
+                                                                </td>
+                                                                <td>
+                                                                    SOLD
                                                                 </td>
                                                                 <td>
                                                                     <div class="dropdown">
@@ -145,16 +143,7 @@
                                                                                 <div class="menu-item">
                                                                                     <a class="modal-opener" data-modal-target=".view-advert">View</a> 
                                                                                 </div>
-                                                                                <div class="menu-item">
-                                                                                    <a href="/user/update-car-advert.html">Update</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".publish-advert">Publish</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".status-advert">Mark as Sold</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
+                                                                                <div class="menu-item" >
                                                                                     <a class="modal-opener" data-modal-target=".delete-advert">Delete</a> 
                                                                                 </div>
                                                                             </div>
@@ -165,9 +154,11 @@
                                                             <tr>
                                                                 <td>2</td>
                                                                 <td data-title="Title">Car  Title 2</td>
-                                                                <td> UNSOLD </td>
-                                                                <td class="text-center">
-                                                                    <button type="button" class="button bg-blue modal-opener dilb p-tb10-lr20 bdr-color-blue" data-modal-target=".image-process">Upload Image</button>
+                                                                <td>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, officia deleniti alias odio nemo in voluptatum voluptatibus quas, sit veritatis harum et reiciendis cupiditate repudiandae. Officia voluptate totam voluptatum omnis!
+                                                                </td>
+                                                                <td>
+                                                                    UNSOLD
                                                                 </td>
                                                                 <td>
                                                                     <div class="dropdown">
@@ -177,16 +168,7 @@
                                                                                 <div class="menu-item">
                                                                                     <a class="modal-opener" data-modal-target=".view-advert">View</a> 
                                                                                 </div>
-                                                                                <div class="menu-item">
-                                                                                    <a href="/user/update-car-advert.html">Update</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".publish-advert">Publish</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".status-advert">Mark as Sold</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
+                                                                                <div class="menu-item" >
                                                                                     <a class="modal-opener" data-modal-target=".delete-advert">Delete</a> 
                                                                                 </div>
                                                                             </div>
@@ -197,9 +179,11 @@
                                                             <tr>
                                                                 <td>3</td>
                                                                 <td data-title="Title">Car  Title 3</td>
-                                                                <td> UNSOLD </td>
-                                                                <td class="text-center">
-                                                                    <button type="button" class="button bg-blue modal-opener dilb p-tb10-lr20 bdr-color-blue" data-modal-target=".image-process">Upload Image</button>
+                                                                <td>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, officia deleniti alias odio nemo in voluptatum voluptatibus quas, sit veritatis harum et reiciendis cupiditate repudiandae. Officia voluptate totam voluptatum omnis!
+                                                                </td>
+                                                                <td>
+                                                                    UNSOLD
                                                                 </td>
                                                                 <td>
                                                                     <div class="dropdown">
@@ -209,16 +193,7 @@
                                                                                 <div class="menu-item">
                                                                                     <a class="modal-opener" data-modal-target=".view-advert">View</a> 
                                                                                 </div>
-                                                                                <div class="menu-item">
-                                                                                    <a href="/user/update-car-advert.html">Update</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".publish-advert">Publish</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".status-advert">Mark as Sold</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
+                                                                                <div class="menu-item" >
                                                                                     <a class="modal-opener" data-modal-target=".delete-advert">Delete</a> 
                                                                                 </div>
                                                                             </div>
@@ -229,9 +204,11 @@
                                                             <tr>
                                                                 <td>4</td>
                                                                 <td data-title="Title">Car  Title 4</td>
-                                                                <td> UNSOLD </td>
-                                                                <td class="text-center">
-                                                                    <button type="button" class="button bg-blue modal-opener dilb p-tb10-lr20 bdr-color-blue" data-modal-target=".image-process">Upload Image</button>
+                                                                <td>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, officia deleniti alias odio nemo in voluptatum voluptatibus quas, sit veritatis harum et reiciendis cupiditate repudiandae. Officia voluptate totam voluptatum omnis!
+                                                                </td>
+                                                                <td>
+                                                                    SOLD
                                                                 </td>
                                                                 <td>
                                                                     <div class="dropdown">
@@ -241,16 +218,7 @@
                                                                                 <div class="menu-item">
                                                                                     <a class="modal-opener" data-modal-target=".view-advert">View</a> 
                                                                                 </div>
-                                                                                <div class="menu-item">
-                                                                                    <a href="/user/update-car-advert.html">Update</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".publish-advert">Publish</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".status-advert">Mark as Sold</a> 
-                                                                                </div>
-                                                                                <div class="menu-item">
+                                                                                <div class="menu-item" >
                                                                                     <a class="modal-opener" data-modal-target=".delete-advert">Delete</a> 
                                                                                 </div>
                                                                             </div>
@@ -261,9 +229,11 @@
                                                             <tr>
                                                                 <td>5</td>
                                                                 <td data-title="Title">Car  Title 5</td>
-                                                                <td> UNSOLD </td>
-                                                                <td class="text-center">
-                                                                    <button type="button" class="button bg-blue modal-opener dilb p-tb10-lr20 bdr-color-blue" data-modal-target=".image-process">Upload Image</button>
+                                                                <td>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, officia deleniti alias odio nemo in voluptatum voluptatibus quas, sit veritatis harum et reiciendis cupiditate repudiandae. Officia voluptate totam voluptatum omnis!
+                                                                </td>
+                                                                <td>
+                                                                    SOLD
                                                                 </td>
                                                                 <td>
                                                                     <div class="dropdown">
@@ -273,16 +243,57 @@
                                                                                 <div class="menu-item">
                                                                                     <a class="modal-opener" data-modal-target=".view-advert">View</a> 
                                                                                 </div>
-                                                                                <div class="menu-item">
-                                                                                    <a href="/user/update-car-advert.html">Update</a> 
+                                                                                <div class="menu-item" >
+                                                                                    <a class="modal-opener" data-modal-target=".delete-advert">Delete</a> 
                                                                                 </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>6</td>
+                                                                <td data-title="Title">Car  Title 6</td>
+                                                                <td>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, officia deleniti alias odio nemo in voluptatum voluptatibus quas, sit veritatis harum et reiciendis cupiditate repudiandae. Officia voluptate totam voluptatum omnis!
+                                                                </td>
+                                                                <td>
+                                                                    UNSOLD
+                                                                </td>
+                                                                <td>
+                                                                    <div class="dropdown">
+                                                                        <span class="anchor"></span>
+                                                                        <div class="content">
+                                                                            <div class="menu-list">
                                                                                 <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".publish-advert">Publish</a> 
+                                                                                    <a class="modal-opener" data-modal-target=".view-advert">View</a> 
                                                                                 </div>
-                                                                                <div class="menu-item">
-                                                                                    <a class="modal-opener" data-modal-target=".status-advert">Mark as Sold</a> 
+                                                                                <div class="menu-item" >
+                                                                                    <a class="modal-opener" data-modal-target=".delete-advert">Delete</a> 
                                                                                 </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7</td>
+                                                                <td data-title="Title">Car  Title 7</td>
+                                                                <td>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, officia deleniti alias odio nemo in voluptatum voluptatibus quas, sit veritatis harum et reiciendis cupiditate repudiandae. Officia voluptate totam voluptatum omnis!
+                                                                </td>
+                                                                <td>
+                                                                    UNSOLD
+                                                                </td>
+                                                                <td>
+                                                                    <div class="dropdown">
+                                                                        <span class="anchor"></span>
+                                                                        <div class="content">
+                                                                            <div class="menu-list">
                                                                                 <div class="menu-item">
+                                                                                    <a class="modal-opener" data-modal-target=".view-advert">View</a> 
+                                                                                </div>
+                                                                                <div class="menu-item" >
                                                                                     <a class="modal-opener" data-modal-target=".delete-advert">Delete</a> 
                                                                                 </div>
                                                                             </div>
@@ -305,7 +316,6 @@
         </div>
     </section>
      <!-- End of Product Listing -->
-
 
     <!-- Beginning Footer -->
     <footer class="bg-blue">
@@ -341,45 +351,7 @@
     </footer>
     <!-- End of Footer -->
 
-
-    <!-- Beginning of Add Media Modal -->
-    <div class="modal image-process">
-        <div class="modal-inner">
-            <div class="modal-header">
-                <header>
-                    <h6 class="marginless">Add Media</h6>
-                </header>
-                <div class="close">
-                    <span class="close">&times;</span>
-                </div>
-            </div>
-            <div class="modal-content paddingless minus-mt2">
-                <div class="cols">
-                    <div class="col-8 paddingless">
-                        <div class="cols bg-c-grey">
-                            <div class="col-12 paddingless">
-                                <div class="inner-page-menu active">
-                                    Select Media
-                                </div>
-                                <div class="inner-page-menu">
-                                    Upload Media
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cols">
-                            
-                            <div class="col-12">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 paddingless bg-light-grey"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of Modal -->
-    <!-- Beginning of View Car Advert Modal -->
+    <!-- Beginning of View Car Modal -->
     <div class="modal view-advert">
             <div class="modal-inner">
                 <div class="modal-header">
@@ -444,52 +416,7 @@
                 </div>
             </div>
     </div>
-    <!-- End of View Car Advert Modal -->
-
-    <!-- Beginning of Publish or Draft Car Advert Modal -->
-    <div class="modal publish-advert">
-        <div class="modal-inner">
-            <div class="modal-header">
-                <header>
-                    <h6 class="marginless">Publish Car Advert</h6>
-                </header>
-                <div class="close"><span class="close">&times;</span></div>
-            </div>
-            <div class="modal-content">
-                <div class="cols">
-                    <div class="col-sm-up-offset-2 col-8">
-                        <button class="button bg-peach">
-                            Publish Car Title 1
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of Publish or Draft Car  AdvertModal -->
-
-    <!-- Beginning of Sold or Unsold Car Modal -->
-    <div class="modal status-advert">
-        <div class="modal-inner">
-            <div class="modal-header">
-                <header>
-                    <h6 class="marginless">Mark as Sold</h6>
-                </header>
-                <div class="close"><span class="close">&times;</span></div>
-            </div>
-            <div class="modal-content">
-                <div class="cols">
-                    <div class="col-sm-up-offset-2 col-8">
-                        <button class="button bg-peach">
-                            Mark Car Title 1 as sold
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of Sold or Unsold Car Modal -->
-
+    <!-- End of View Car  Modal -->
 
     <!-- Beginning of Delete Car Modal -->
     <div class="modal delete-advert">
